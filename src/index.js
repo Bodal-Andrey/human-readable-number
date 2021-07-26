@@ -62,7 +62,11 @@ module.exports = function toReadable(number) {
         }
 
         if (strNum[2] == 0 && strNum[1] == 1) {
-            return FIRST_TEN[strNum[0]] + ` hundred ` + FIRST_TEN[10]
+            return FIRST_TEN[strNum[0]] + " hundred " + FIRST_TEN[10]
+        }
+
+        if (strNum[1] == 0) {
+            return FIRST_TEN[strNum[0]] + " hundred " + FIRST_TEN[strNum[2]]
         }
 
         if (strNum[1] == 1) {
