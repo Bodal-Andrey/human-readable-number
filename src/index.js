@@ -52,23 +52,23 @@ module.exports = function toReadable(number) {
         if (strNum[1] == 0) {
             return TENS[strNum[0]];
         } else {
-            return TENS[strNum[0]] + ` ` + FIRST_TEN[strNum[1]];
+            return TENS[strNum[0]] + " " + FIRST_TEN[strNum[1]];
         }
     }
 
     if (number >= 100 && number < 1000) {
         if (strNum[2] == 0 && strNum[1] == 0) {
-            return FIRST_TEN[strNum[0]] + ` hundred`;
+            return FIRST_TEN[strNum[0]] + " hundred";
         }
 
         if (strNum[1] == 1) {
-            return FIRST_TEN[strNum[0]] + ` hundred ` + SECOND_TEN[strNum[2]]
+            return FIRST_TEN[strNum[0]] + " hundred " + SECOND_TEN[strNum[2]]
         }
 
         if (strNum[2] == 0) {
-            return FIRST_TEN[strNum[0]] + ` hundred ` + TENS[strNum[1]];
+            return FIRST_TEN[strNum[0]] + " hundred " + TENS[strNum[1]];
         } else {
-            return FIRST_TEN[strNum[0]] + ` hundred ` + TENS[strNum[1]] + ` ` + FIRST_TEN[strNum[2]];
+            return FIRST_TEN[strNum[0]] + " hundred " + TENS[strNum[1]] + " " + FIRST_TEN[strNum[2]];
         }
     }
 }
